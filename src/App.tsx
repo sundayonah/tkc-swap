@@ -45,8 +45,8 @@ function App() {
   //approve f(x)
 
   async function ApproveAddress() {
-    if (!window.ethereum) {
-        throw new Error('MetaMask is not installed!');
+   if (!window.ethereum) {
+      throw new Error('MetaMask is not installed!');
     }
     setIsLoading(true)
 
@@ -76,9 +76,9 @@ function App() {
   //    /////   bridge F(x) ///////////
     const Bridge = async () => {
 
-        if (!window.ethereum) {
-        throw new Error('MetaMask is not installed!');
-        }
+       if (!window.ethereum) {
+      throw new Error('MetaMask is not installed!');
+    }
       
     setIsLoading(true)
       
