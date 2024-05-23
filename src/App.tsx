@@ -29,7 +29,6 @@ function App() {
 
   // const { address, chainId, isConnected } = useWeb3ModalAccount()
   
-  // console.log({address, chainId, isConnected})
 
     const [isLoading, setIsLoading] = useState(false)
     const [amount, setAmount] = useState('');
@@ -49,7 +48,6 @@ function App() {
     if (!window.ethereum) {
         throw new Error('MetaMask is not installed!');
     }
-    console.log(amount, "approving")
     setIsLoading(true)
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -58,17 +56,14 @@ function App() {
     const amountInWei = ethers.utils.parseEther("100000000");
 
     const approveContract = new ethers.Contract(TKCADDRESS, approveABI, signer);
-    console.log({amountInWei, approveContract})
 
     try {
         const tx = await approveContract.approve(APPROVE_ADDRESS, amountInWei, {
            gasLimit: 600000,
            gasPrice: ethers.utils.parseUnits('10.0', 'gwei'),
         });
-        console.log(`Approval transaction hash: ${tx.hash}`);
 
         await tx.wait();
-      console.log('Approval confirmed!', tx);
         setIsLoading(false)
         setIsApproved(true); 
     } catch (error) {
@@ -84,7 +79,6 @@ function App() {
         if (!window.ethereum) {
         throw new Error('MetaMask is not installed!');
         }
-    console.log(amount, "bridging")
       
     setIsLoading(true)
       
@@ -100,8 +94,7 @@ function App() {
            gasLimit: 600000,
            gasPrice: ethers.utils.parseUnits('10.0', 'gwei'),
         });
-      const receipt = await tx.wait();
-      console.log(receipt);
+       await tx.wait();
     setIsLoading(false)
 
       
