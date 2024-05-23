@@ -4,6 +4,8 @@ import App from './App.tsx'
 import './index.css'
 
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react'
+// import { createWeb3Modal, defaultConfig } from '@web3modal/ethers';
+
 
 // import { WagmiConfig } from 'wagmi';
 

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ethers } from "ethers";
 import tkcSwapAbi from "./tkcSwap.json"
+import ConnectButton from "./connectButton";
 
 
 function App() {
@@ -111,7 +112,7 @@ function App() {
       <div className="container w-full sm:w-[60%] md:w-[60%] lg:w-[30%] m-auto mt-64 px-4 ">
         <div className="flex justify-center mb-10 ">
 
-      <w3m-button />
+      <ConnectButton />
         </div>
       <div className="flex items-center justify-center space-y-4 p-3 rounded-md shadow-2xl bg-[#0d1117]">
           
