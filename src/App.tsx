@@ -28,7 +28,6 @@ function App() {
 
   // const { address, chainId, isConnected } = useWeb3ModalAccount()
   
-
     const [isLoading, setIsLoading] = useState(false)
     const [amount, setAmount] = useState('');
     const [isApproved, setIsApproved] = useState(false); 
