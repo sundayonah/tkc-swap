@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-// import { StakingContextProvider } from '@/Context/StakeContext';
-// import Header from '@/components/header';
+
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react'
 
 // import { WagmiConfig } from 'wagmi';
@@ -41,11 +40,7 @@ const mainnet = {
   rpcUrl: 'https://bsc-dataseed.binance.org' // BSC RPC URL
 };
 
-// const chains = [mainnet, arbitrum, bsc, bscTestnet, polygon, sepolia, goerli];
-// const wagmiConfig = defaultConfig({ chains, projectId, metadata });
 
-// // 3. Create modal
-// createWeb3Modal({ wagmiConfig, projectId, chains });
 createWeb3Modal({
   ethersConfig,
   chains: [mainnet],
