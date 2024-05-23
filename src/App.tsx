@@ -106,7 +106,7 @@ function App() {
   return (
     <>
  
-      <div className="container w-full sm:w-[60%] md:w-[60%] lg:w-[30%] m-auto mt-64 px-4 ">
+      <div className="container w-full sm:w-[60%] md:w-[60%] lg:w-[30%] m-auto mt-36 px-4 ">
         <div className="flex justify-center mb-10 ">
 
       <ConnectButton />
