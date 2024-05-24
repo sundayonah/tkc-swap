@@ -122,7 +122,7 @@ function App() {
           placeholder="Enter Amount"
           className="w-full shadow-md p-2 rounded text-white bg-slate-900 focus:outline-none focus:ring-0"
             />
-            {isApproved ?
+            {!isApproved ?
 
               <button
                 onClick={ApproveAddress}
@@ -150,7 +150,7 @@ function App() {
                     <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-white"></div>
                   </div>
                 ) : isApproved ? (
-                  "Bridge" // Change button text to "Bridge" after approval
+                  "Bridge"
                 ) : (
                   "Bridge"
                 )}
